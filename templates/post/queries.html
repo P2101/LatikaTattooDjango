@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Autores</h1>
+
+    <ul>
+        {% for author in authors %}
+        <li> {{ author.name }} ({{ author.email}})</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Filtrado por lopez@example.com</h2>
+   <ul>
+        {% for filter in filtered %}
+        <li> {{ filter.name }} ({{ filter.email }})</li>
+        {% endfor %}
+   </ul>
+
+    <h3>Total de autores: {{ authors|length }}</h3>
+
+     <h3>El primer autor es: {{ author }}</h3> <!--si no indicam què volem, funciona sa funció str i treu es nom -->
+
+     <ul>
+        {% for limit in limits%}
+        <li> {{ limit.email }}</li>
+        {% endfor %}
+     </ul>
+
+     <ul>
+        {%for anitlimit in antilimits %}
+        <li> {{ anitlimit.email }}</li>
+        {% endfor %}
+    </ul>
+    <h3>elementos ordenados</h3>
+    <ul>
+        {% for order in orders %}
+        <li>{{ order.email }}</li>
+        {% endfor%}
+    </ul>
+    
+    <h2>Filtrado por ids igual menor a 10</h2>
+   <ul>
+        {% for filter in filtered2 %}
+        <li> {{ filter.name }} ({{ filter.email }})</li>
+        {% endfor %}
+   </ul>
+
+   <h2>Contiene yes</h2>
+   <ul>
+        {% for filter in filtered3 %}
+        <li> {{ filter.name }}</li>
+        {% endfor %}
+   </ul>
+</body>
+</html>
