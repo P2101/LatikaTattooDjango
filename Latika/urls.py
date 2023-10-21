@@ -17,11 +17,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('galeria/', views.galeria, name='galeria'),
+    # path('galeria/', views.galeria, name='galeria'),
     path('comentarios/', include('comentarios.urls')), # CUANDO CREAMOS UNA APP, Y QUEREMOS ACCEDER DENTRO, SE LO INDICAMOS CON EL INCLUDE . ARCHIVO A BUSCAR    
-    path('post/', include('post.urls'))
+    path('post/', include('post.urls')),
+    path('galeria/', include('Images.urls')),
 ]
+
+# PREPARA-HO PER PRODUCIÓ AMB ENGINEX
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

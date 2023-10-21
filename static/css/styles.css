@@ -2,8 +2,8 @@
 :root{
     --color-primary: #ffce00;
     --color-secundary: #ffa300;
-    --color-text: #707789;
-    --color-bg: #dedede;
+    --color-bg: #71737a;
+    --color-text: rgb(178,178,178);
     --font-title: groove;
 }
 *{
@@ -13,9 +13,17 @@
 }
 h1{
     text-align: center;
+    text-transform: uppercase;
 }
 h3{
-    text-align: left;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a img{
+    display: inline-block;
 }
 nav{
     display: flex;
@@ -23,7 +31,8 @@ nav{
     justify-content: space-between;
     align-items: center;
     height: 100px;
-    background-color: var(--color-primary);
+    background-color: rgb(20,22,21);
+    /* background-color: var(--color-bg); */
 }
 
 nav img{
@@ -44,25 +53,29 @@ nav ul li a{
     color: black;
     font-size: 40px;
     font-weight: 700;
-    font-family: var(--font-title);
+    margin-right: 15px;
+    /* font-family: var(--font-title); */
+    color: white;
 }
 nav ul li a:hover{
-    color: white;
+    color: grey;
 }
 main{
     display: flex;
-    text-align: center;
+    text-align: left;
     padding: 50px;
     width: 100vw;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: var(--color-bg);
+    /* background-color: aqua; */
+    background-color: var(--color-text);
 }
 footer{
     width: 100vw;
     min-height: 150px;
-    background-color: var(--color-text);
+    background-color: rgb(20,22,21);
+    /* background-color: var(--color-bg); */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -73,21 +86,43 @@ footer img{
     margin: 25px;
 }
 footer ul li a{
-    color: var(--color-bg);
+    /* color: var(--color-text); */
+    color: white;
     text-decoration: none;
+    font-size: 35px;
+    margin: 5px;
+}
+footer ul li a:hover{
+    color: grey;
 }
 .about{
     display: flex;
     padding: 50px;
+    justify-content: center;
+    width: 90%;
+}
+.data{
+    margin-top: 100px;
+    width: 20%;
+}
+.data img p{
+    display: inline;
 }
 .about-content{
-    width: 350px;
     padding: 25px;
 }
 .fotos{
     margin-top: 50px;
     display: flex;
     justify-content: center;
+}
+.fotos img{
+    width: 250px;
+    height: 300px;
+}
+.fotosIndex img{
+    width: 250px;
+    height: 300px;
 }
 /* ESTO ES PARA IMPORTAR LAS FUENTES, IMPORTAMOS DE DAFONT */
 @font-face {
@@ -104,6 +139,7 @@ img{
     margin: 10px;
 }
 img.enlarged:hover {
-    width: 200px; 
+    width: 300px; 
     height: 350px;
+    margin-top: 20px;
 }

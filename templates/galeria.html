@@ -1,20 +1,27 @@
 {% extends 'layouts/base.html' %}
+{% load static %}
 {% block title %}
 Galería
 {% endblock %}
 
 {% block content %}
 <h1>Galería</h1>
+
+
 <div class="fotos">
-    <img src="https://picsum.photos/200/300" class="enlarged"/>
-    <img src="https://picsum.photos/200/300" alt="" class="enlarged2"/>
-    <img src="https://picsum.photos/200/300" alt="" class="enlarged2"/>
-    <img src="https://picsum.photos/200/300" alt="" class="enlarged2"/>
-    <img src="https://picsum.photos/200/300" alt="" class="enlarged2"/>
-    <img src="https://picsum.photos/200/300" class="enlarged"/>
-    <img src="https://picsum.photos/200/300" alt="" class="enlarged2"/>
-    <img src="https://picsum.photos/200/300" alt="" class="enlarged2"/>
-    <img src="https://picsum.photos/200/300" alt="" class="enlarged2"/>
-    <img src="https://picsum.photos/200/300" alt="" class="enlarged2"/>
+    <!-- <a href="{% static 'imgs/lat1.jpg' %}" target="_blank"><img src="{% static 'imgs/lat1.jpg' %}" class="enlarged"/></a>
+    <a href="{% static 'imgs/lat2.jpg' %}" target="_blank"><img src="{% static 'imgs/lat2.jpg' %}" class="enlarged"/></a>
+    <a href="{% static 'imgs/lat3.jpg' %}" target="_blank"><img src="{% static 'imgs/lat3.jpg' %}" class="enlarged"/></a>
+    <a href="{% static 'imgs/lat4.jpg' %}" target="_blank"><img src="{% static 'imgs/lat4.jpg' %}" class="enlarged"/></a>
+    <a href="{% static 'imgs/lat5.jpg' %}" target="_blank"><img src="{% static 'imgs/lat5.jpg' %}" class="enlarged"/></a>
+    <a href="{% static 'imgs/lat6.jpg' %}" target="_blank"><img src="{% static 'imgs/lat6.jpg' %}" class="enlarged"/></a>
+    <a href="{% static 'imgs/lat7.jpg' %}" target="_blank"><img src="{% static 'imgs/lat7.jpg' %}" class="enlarged"/></a>
+    <a href="{% static 'imgs/lat8.jpg' %}" target="_blank"><img src="{% static 'imgs/lat8.jpg' %}" class="enlarged"/></a> -->
+
+    {% for imagen in imagenes %}
+    <a href="{% static 'imgs/' %}{{ imagen }}" target="_blank"><img src="{% static 'imgs/' %}{{ imagen }}" alt="{{ imagen }}"></a>
+        <!-- BASE de DATOS -->
+        <!-- <a href="{{ image.imagen.url }}" target="_blank"><img src="{{ image.imagen.url }}" alt="{{ image.nombre }}"></a> -->
+    {% endfor %}
 </div>
 {% endblock %}

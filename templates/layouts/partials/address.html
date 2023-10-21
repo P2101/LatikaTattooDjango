@@ -1,0 +1,22 @@
+<!-- {% load leaflet_tags %}
+
+<html>
+<head>
+   <title>Detalle del Lugar</title>
+   {% leaflet_js %}
+   {% leaflet_css %}
+</head>
+<body>
+   <h1>{{ lugar.nombre }}</h1>
+   <div id="mapid" style="width: 500px; height: 300px;"></div>
+   
+   <script>
+       var map = L.map('mapid').setView([{{ lugar.latitud }}, {{ lugar.longitud }}], 15);
+       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+           maxZoom: 19,
+       }).addTo(map);
+       L.marker([{{ lugar.latitud }}, {{ lugar.longitud }}]).addTo(map)
+           .bindPopup("{{ lugar.nombre }}").openPopup();
+   </script>
+</body>
+</html> -->

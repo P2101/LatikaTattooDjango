@@ -1,17 +1,43 @@
 {% extends 'layouts/base.html' %}
+{% load static %}
 {% block title %}
 Home
 {% endblock %}
 
 {% block content %}
 <h1>Latika Tattoo</h1>
+
 <div class="about">
-    <img src="https://picsum.photos/id/870/200/300?grayscale&blur=2" alt="Far">
+    <div class="data">
+        <img src="{% static 'imgs/logos/location.png' %}" alt="Ubicacion" width="20" height="20">
+        <a href="https://www.google.com/maps/place/LATIKA+TATTOO/@40.0006533,3.8431549,15.48z/data=!4m20!1m13!4m12!1m4!2m2!1d4.0206336!2d39.9835136!4e1!1m6!1m2!1s0x12be0561aba03b93:0x9c6be311640a4fec!2slatika+tatto!2m2!1d3.8490292!2d40.0053136!3m5!1s0x12be0561aba03b93:0x9c6be311640a4fec!8m2!3d40.0053136!4d3.8490292!16s%2Fg%2F11qpvcgzxf?entry=ttu" target="_blank">
+        <p>Carrer de Lleida, 24, 07760 Ciutadella de Menorca, Illes Balears</p>
+        </a>
+        <p>
+        <img src="{% static 'imgs/logos/phone.png' %}" alt="Phone" />611 09 92 67
+        </p>
+        <p>
+        <img src="{% static 'imgs/logos/ig.png' %}" alt="Instagram" width="20" height="20">
+        <a href="https://www.instagram.com/luisruztattoo/?hl=es" target="_blank">LATIKA TATTOO</a>
+        </p>
+    </div>
+    
     <div class="about-content">
-        <h3>Info....</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis necessitatibus voluptate blanditiis optio
-            adipisci dolorem, odit nesciunt inventore, eligendi, architecto expedita aliquid. Corrupti omnis odit
-            ratione amet impedit voluptas blanditiis!</p>
+        <!-- <h4>Galería</h4> -->
+        <a href="{% url 'galeria' %}"><img src="{% static 'imgs/logos/luiggink.jpg' %}" alt="luiggink" width="350" height="350"/></a>
+        <!-- <h4>Ubicacion</h4> -->
+        <a href="https://www.google.com/maps/place/LATIKA+TATTOO/@40.0006533,3.8431549,15.48z/data=!4m20!1m13!4m12!1m4!2m2!1d4.0206336!2d39.9835136!4e1!1m6!1m2!1s0x12be0561aba03b93:0x9c6be311640a4fec!2slatika+tatto!2m2!1d3.8490292!2d40.0053136!3m5!1s0x12be0561aba03b93:0x9c6be311640a4fec!8m2!3d40.0053136!4d3.8490292!16s%2Fg%2F11qpvcgzxf?entry=ttu" target="_blank">
+        <img src="{% static 'imgs/logos/salon.png' %}" alt="Salon" width="350" height="350"/></a>
+    </div>
+</div>
+
+<div class="top">
+    <h1>Top 4</h1>
+    <div class="fotosIndex">
+        <a href="{% static 'imgs/lat1.jpg' %}" target="_blank"><img src="{% static 'imgs/lat1.jpg' %}" class="enlarged"/></a>
+        <a href="{% static 'imgs/lat2.jpg' %}" target="_blank"><img src="{% static 'imgs/lat2.jpg' %}" class="enlarged"/></a>
+        <a href="{% static 'imgs/lat4.jpg' %}" target="_blank"><img src="{% static 'imgs/lat4.jpg' %}" class="enlarged"/></a>
+        <a href="{% static 'imgs/lat3.jpg' %}" target="_blank"><img src="{% static 'imgs/lat3.jpg' %}" class="enlarged"/></a>
     </div>
 </div>
 {% endblock %}
