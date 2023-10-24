@@ -123,7 +123,7 @@ STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
     BASE_DIR / "static", # Este para que funcione los archivos estáticos
-    # '/var/www/static' # Este para producción
+    '/var/www/static' # Este para producción
 ]
 
 # Default primary key field type
